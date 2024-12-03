@@ -50,9 +50,9 @@ exports.signup = catchAsync(async (req, res, next) => {
 
   // Remove password from output
   newUser.password = undefined;
-  //   const url = `${req.protocol}://localhost:5173/profile`;
+  const url = `${req.protocol}://localhost:5173/profile`;
   // console.log(url);
-  //   await new Email(newUser, url).sendWelcome();
+  await new Email(newUser, url).sendWelcome();
   createSendToken(newUser, 201, res);
 });
 

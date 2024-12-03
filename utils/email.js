@@ -7,7 +7,6 @@ module.exports = class Email {
   constructor(user, url) {
     this.to = user.email;
     this.firstName = user.name.split(" ")[0];
-    //the url is ooming from the authcontroller
     this.url = url;
     this.from = `PRUTHVIJ DESAI <${process.env.EMAIL_FROM}>`;
   }
@@ -50,9 +49,6 @@ module.exports = class Email {
     };
 
     await this.newTransport().sendMail(mailOptions);
-  }
-  async sendBookingReceipt(booking) {
-    await this.send("receipt", "Booking Receipt", booking);
   }
 
   async sendWelcome() {

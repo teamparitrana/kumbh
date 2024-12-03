@@ -1,0 +1,78 @@
+//- extends baseEmail
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Welcome to our Tour!
+    link(rel="stylesheet", href="email.css")
+    style.
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f7f7f7;
+          margin: 0;
+          padding: 0;
+      }
+      .container {
+          max-width: 600px;
+          margin: 20px auto;
+          background-color: #ffffff;
+          padding: 40px;
+          border-radius: 8px;
+          box-shadow: 0 0 20px rgba(0,0,0,0.1);
+          display: flex;
+          flex-direction: column;
+      }
+      .head {
+          display: flex;
+          justify-content: center; /* Center the image and text horizontally */
+          align-items: center;
+          margin-bottom: 20px;
+      }
+      .img {
+          height: 60px;
+          width: 60px;
+          margin-right: 10px;
+      }
+      h3 {
+          color: #0e0202;
+          font-size: 28px;
+          margin: 0;
+      }
+      p {
+          color: #222;
+          font-size: 16px;
+          line-height: 1.6;
+          margin-bottom: 20px;
+          text-align: left;
+      }
+      .customer {
+          text-align: left;
+      }
+      .button {
+          display: inline-block;
+          padding: 15px 30px;
+          background-color: #4CAF50;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 5px;
+          font-size: 16px;
+          transition: background-color 0.3s;
+      }
+      .button:hover {
+          background-color: #45a049;
+      }
+  body
+    .container
+      .head
+        img.img(src="https://res.cloudinary.com/pruthvij/image/upload/v1714304883/g1umtv3zlem7mlk1tbvl.webp", alt="")
+        h3 Paritrana Tours
+      p.customer Dear #{firstName},
+      p Welcome to our exclusive tour experience! We are thrilled to have you join us on this incredible journey.
+      p With Paritrana Tours, you'll explore breathtaking destinations, immerse yourself in unique cultures, and create unforgettable memories. Our team is here to ensure your trip is seamless and enjoyable.
+      p Be sure to check your itinerary and prepare for the adventure ahead. If you have any questions or special requests, feel free to reach out to us.
+      p We hope this tour is everything you dream of and more!
+      p(style="text-align: center;") 
+        a.button(href=`${url}`, target='_blank') View Tour Details
+      p If you need any help, please don't hesitate to contact us!
+      p - Team Paritrana
